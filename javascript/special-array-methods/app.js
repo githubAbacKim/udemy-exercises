@@ -75,6 +75,11 @@ const taxAdjustedPrices = prices.map((price,idx)=>{
 })
 console.log('map:', taxAdjustedPrices)
 
+// shortcut way to return result on map
+// also map can make a new edit array from an existing array
+console.log('map edited array',hobbies.map(hobby=>`Hobby: ${hobby}`));
+console.log('hobbies array: ',hobbies);
+
 // .sort() & reverse
 const sortedPrices = prices.sort((a,b)=>{
     if(a > b){
@@ -140,16 +145,13 @@ const copiedPersons = [...persons];
 
 persons.push({name:'Anna', age: 29});
 persons[0].age = 29;
-
 console.log(persons,copiedPersons)
-
 
 // array destructuring;
 // a method of declaring and calling array value in a shortcut way
 const nameData = ['Max', 'Schwarz', 'Mr', 30];
 // you can also collect the other array to new array using the spread operator
 const [firstName, lastName, ...otherInformation] = nameData;
-
 console.log('array destructing: ',firstName, lastName, otherInformation);
 
 // you can transform any set using to an array using .from()
