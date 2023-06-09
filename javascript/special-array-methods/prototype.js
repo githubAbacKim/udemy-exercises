@@ -9,4 +9,6 @@ User.prototype.login = function(){
     console.log(this.email,'has logged in');
 }
 
-User.prototype.logout
+User.prototype.logout = function(){
+    
+}

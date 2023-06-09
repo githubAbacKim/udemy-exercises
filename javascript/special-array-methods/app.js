@@ -154,4 +154,12 @@ const nameData = ['Max', 'Schwarz', 'Mr', 30];
 const [firstName, lastName, ...otherInformation] = nameData;
 console.log('array destructing: ',firstName, lastName, otherInformation);
 
+// destructure an object
+// must enclose with {}
+const objPerson = {
+    name: 'Kim', age: 32
+}
+const {myname, age} = objPerson;
+console.log(myname);
+
 // you can transform any set using to an array using .from()
