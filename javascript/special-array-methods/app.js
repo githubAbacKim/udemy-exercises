@@ -163,3 +163,47 @@ const {myname, age} = objPerson;
 console.log(myname);
 
 // you can transform any set using to an array using .from()
+
+// another way of copying an array aside from spread operator.
+const person = {name: 'Max'};
+const person2 = Object.assign({},person);
+
+//renaming property of an object using destructuring
+const {name: fname} = person;
+
+// using if in
+ if(!('name' in person)){}
+
+// this keyword
+// this will find the variable you are trying to find with in the object or function.
+// also it will depends on who are  responsible in calling this.
+const newMovie = {
+    info:{
+        title,
+        [extraName]: extraValue
+    },
+    id: Math.random().toString(),
+    getFormattedTitle: function(){
+        return this.info.title.toUpperCase();
+    }
+}
+newMovie.getFormattedTitle();
+
+// method shorthand syntax
+const newMovie2 = {
+    info:{
+        title,
+        [extraName]: extraValue
+    },
+    id: Math.random().toString(),
+    // shorthand syntax
+    getFormattedTitle(){
+        return this.info.title.toUpperCase();
+    }
+}
+
+// apply allow you to pass addition as an array
+// const text = getFormattedTitle.apply(newMovie,[])
+
+// call allow you to pass addition arguments as a comma separated list
+// const text2 = getFormattedTitle.call(newMovie, arg1, arg2, arg3)
