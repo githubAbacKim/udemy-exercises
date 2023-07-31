@@ -10,6 +10,24 @@
     <script src="assets/vendor/mustache.js"></script>
   </head> 
   <body>
-    <div id="app"></div>
+    <div id="app">
+        <ul class="product-list">
+
+        </ul>
+    </div>
+
+    <template id="product-template">
+        <li class="project-item">
+            <div>
+                <img src="{{this.product.imageUrl}}" alt="{{this.product.title}}" >
+                <div class="product-item__content">
+                    <h2>{{this.product.title}}</h2>
+                    <h3>${{this.product.price}}</h3>
+                    <p>{{this.product.description}}</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </li>
+    </template>
   </body>
 </html>
